@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+    <!-- content-type -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!-- /content-type -->
+
+    <!-- content-script-type -->
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <!-- /content-script-type -->
+
+    <!-- title -->
+    <title>jQuery plugin - lazyloader example</title>
+    <!-- /title -->
+
+    <!-- javascript -->
+    <script type="text/javascript" src="../src/jquery1.6.4.js"></script>
+    <script type="text/javascript" src="../src/jquery.lazyloader.js"></script>
+
+    <script type="text/javascript">
+
+    $(function() {
+        $(".img-wrap img").lazyloader({
+            effect : "fadeIn",
+            threshold : 100,
+            imgSrcAttr : 'imgsrc',
+            beforeLoadCls: 'loading'
+        });
+    });
+
+    </script>
+    <!-- /javascript -->
+
+    <!-- style -->
+    <style>
+    body {
+      margin:30px;
+    }
+    * {
+      font-family: 'lucida grande',helvetica,tahoma,Arial,sans-serif;
+      font-size: 14px;
+    }
+    h1 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #0F237F;
+      font-weight: normal;
+    }
+    h2 {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #364BAF;
+      font-weight: bold;
+    }
+    h3 {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #364BAF;
+      font-weight: bold;
+    }
+    pre.code {
+      font-size: 12px;
+      border:1px solid #aaa;
+      background:#f0f0f0;
+      padding:0.5em; 
+      overflow: auto;
+      margin:20px;
+    }
+    pre.code span.tag {
+      color: #0000ff;
+    }
+    pre.code span.attr {
+      color: #000;
+    }
+    pre.code span.value {
+      color: #900;
+    }
+    pre.code span.str {
+      color: #009900;
+    }
+    pre.code span.num {
+      color: #009900;
+    }
+    pre.code span.keyword {
+      color: #0000ff;
+    }
+    pre.code span.rem {
+      color: #909;
+    }
+    pre.code span.variable {
+      color: #500050;
+    }
+    .img-wrap {
+      height: 350px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .img-wrap img {
+      max-height: 300px;
+    }
+    .img-wrap img.loading {
+      margin-top: 151px;
+    }
+    </style>
+    <!-- /style -->
+</head>
+<body>
+
+    <h1>jQuery plugin - lazyloader example</h1>
+
+    <h2>sample code</h2>
+
+    <h3>javascript</h3>
+<pre class="code">
+    $(".img-wrap img").lazyloader({
+        effect : "fadeIn",
+        threshold : 100,
+        imgSrcAttr : 'imgsrc',
+        beforeLoadCls: 'loading'
+    });
+</pre>
+
+    <h3>html</h3>
+<pre class="code">
+    &lt;div class="img-wrap">
+        &lt;img src="img/loading.gif" imgsrc="img/1.jpg" />
+    &lt;/div>
+    &lt;div class="img-wrap">
+        &lt;img src="img/loading.gif" imgsrc="img/2.jpg" />
+    &lt;/div>
+    &lt;div class="img-wrap">
+        &lt;img src="img/loading.gif" imgsrc="img/3.jpg" />
+    &lt;/div>
+    ...
+</pre>
+
+    <div class="list-wrap">
+        <div class="img-container">
+            <div class="img-wrap">
+                <img src="img/loading.gif" alt="sample image" imgsrc="img/1.jpg" />
+            </div>
+        </div>
+        <div class="img-container">
+            <div class="img-wrap">
+                <img src="img/loading.gif" alt="sample image" imgsrc="img/2.jpg" />
+            </div>
+        </div>
+        <div class="img-container">
+            <div class="img-wrap">
+                <img src="img/loading.gif" alt="sample image" imgsrc="img/3.jpg" />
+            </div>
+        </div>
+        <div class="img-container">
+            <div class="img-wrap">
+                <img src="img/loading.gif" alt="sample image" imgsrc="img/4.jpg" />
+            </div>
+        </div>
+        <div class="img-container">
+            <div class="img-wrap">
+                <img src="img/loading.gif" alt="sample image" imgsrc="img/5.jpg" />
+            </div>
+        </div>
+        <div class="img-container">
+            <div class="img-wrap">
+                <img src="img/loading.gif" alt="sample image" imgsrc="img/6.jpg" />
+            </div>
+        </div>
+        <div class="img-container">
+            <div class="img-wrap">
+                <img src="img/loading.gif" alt="sample image" imgsrc="img/7.jpg" />
+            </div>
+        </div>
+        <div class="img-container">
+            <div class="img-wrap">
+                <img src="img/loading.gif" alt="sample image" imgsrc="img/8.jpg" />
+            </div>
+        </div>
+        <div class="img-container">
+            <div class="img-wrap">
+                <img src="img/loading.gif" alt="sample image" imgsrc="img/9.jpg" />
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
